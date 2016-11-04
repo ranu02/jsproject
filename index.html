@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>AngularJS Routing example</title>
+    
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body ng-app="app">
+
+    <div class="container">
+			<div class="nav">
+				<a class="tab" href="#home"> HOME </a>
+				<a class="tab" href="#reg"> REGISTER </a>
+				<a class="tab" href="#login"> LOGIN </a>
+		    </div> 
+    </div>
+    <div class="view-part" ng-view></div>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.7/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28//angular-route.min.js"></script>
+	<script src="app.js"></script>
+	<script src="controller/regCtrl.js"></script>
+	<script src="services/services.js"></script>
+	<!--<script src="services/factory/control.js"></script>-->
+  </body>
+</html>
+

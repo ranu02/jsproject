@@ -1,0 +1,74 @@
+
+/*#################################*/
+
+
+	.nav{
+		
+		height: 50px;
+		background-color: green;
+	}
+
+	.tab{
+		height: 50px;
+		width: 100px;
+		float: left;
+		margin-left: 10px;
+		/*background-color: #FF0000;*/
+		/*text-align: center;
+		vertical-align: center;*/
+		margin-top: 15px;
+		color:#FFFFFF;
+
+	}
+	.view-part{
+		margin-top: 10px;
+	}
+	.ng-scope{
+		
+	}
+	.login{
+		margin-left: 20%;
+	}
+
+	.reg-form{
+		width: 100%;
+		margin-left: 20%;
+		text-align: left;
+	}
+	.form-field{
+	margin: 20px 0px 0px 0px;
+
+	}
+	.title{
+		color: green;
+		font-size: 46px;
+	}
+	
+
+	input[type="text"] {
+  display: block;
+  margin: 0;
+  
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="text"]:focus {
+  outline: none;
+}
+
+input[type="password"] {
+  display: block;
+  margin: 0;
+  
+  font-family: sans-serif;
+  font-size: 18px;
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+}
+input[type="password"]:focus {
+  outline: none;
+}

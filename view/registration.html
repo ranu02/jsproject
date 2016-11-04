@@ -1,0 +1,32 @@
+<div class="reg-form" ng-controller="regCtrl">
+<div class="title"> REGISTRATION FORM</div>
+<form>
+  <input type='text' style='display: none'>
+    <input type='password' style='display: none'>
+    <div class="form-field">First Name:<input type="text" name="name" ng-model="name"></div>
+    <div class="form-field">
+    Last Name:
+    <input type="text" name="lastname" ng-model="lastname">
+    </div>
+ <div class="form-field">
+    Email:
+    <input type="text" name="email" ng-model="email">
+    </div>
+
+
+    <div class="form-field">
+    Password:
+    <input type="password" name="pwd" ng-model="pwd">
+    </div>
+
+    <div class="form-field">
+    Re Password:
+    <input type="password" name="repwd" ng-model="repwd">
+    </div>
+   
+    <div class="form-field">
+
+    <button ng-disabled="userForm.$invalid" ng-click="register()" type = "submit" name="save" value="save">REGISTRATION</button>
+    </div>
+</form>
+</div>
