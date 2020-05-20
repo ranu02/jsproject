@@ -62,8 +62,8 @@
         ],
         "parameters": [
           {
-            "in": "body",
-            "name": "body",
+            "in": "formData",
+            "name": "formData",
             "description": "Pet object that needs to be added to the store",
             "required": true,
             "schema": {
