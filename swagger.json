@@ -968,10 +968,6 @@
         "password"
       ],
       "properties": {
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
         "email": {
           "type": "string",
           "example": "test@yopmail.com"
