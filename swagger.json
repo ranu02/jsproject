@@ -21,7 +21,7 @@
       "description": "Everything about your Pets",
       "externalDocs": {
         "description": "Find out more",
-        "url": "http://swagger.io"
+        "url": "http://localhost:5003/"
       }
     },
     {
@@ -33,7 +33,7 @@
       "description": "Operations about user",
       "externalDocs": {
         "description": "Find out more about our store",
-        "url": "http://swagger.io"
+        "url": "http://localhost:5003/"
       }
     }
   ],
