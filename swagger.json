@@ -13,7 +13,7 @@
       "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
     }
   },
-  "host": "http://localhost:5003/",
+  "host": "localhost:5003/",
   "basePath": "",
   "tags": [
     {
@@ -21,7 +21,7 @@
       "description": "Onboard user",
       "externalDocs": {
         "description": "Email and Password required field",
-        "url": "http://localhost:5003/"
+        "url": "localhost:5003/"
       }
     },
     {
@@ -33,7 +33,7 @@
       "description": "Operations about user",
       "externalDocs": {
         "description": "Find out more about our store",
-        "url": "http://localhost:5003/"
+        "url": "localhost:5003/"
       }
     }
   ],
