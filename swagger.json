@@ -66,14 +66,18 @@
             "name": "email",
             "description": "user email",
             "required": true,
-            "type": string
+            "schema": {
+              "$ref": "#/definitions/Onboard"
+            }
           },
           {
             "in": "formData",
             "name": "password",
             "description": "user password",
             "required": true,
-            "type": string
+            "schema": {
+              "$ref": "#/definitions/Onboard"
+            }
           }
         ],
         "responses": {
