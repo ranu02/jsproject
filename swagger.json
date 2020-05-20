@@ -24,7 +24,7 @@
     }
   ],
   "paths": {
-    "/request": {
+    "/onboard": {
       "get": {
         "tags": [
           "Book Request"
@@ -199,7 +199,7 @@
       "bookRequestPostBody": {
         "type": "object",
         "properties": {
-          "title": {
+          "password": {
             "type": "string",
             "format": "string"
           },
