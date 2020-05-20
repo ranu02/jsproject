@@ -74,11 +74,12 @@
         "responses": {
           "200": {
             "description": "successful operation",
-            "schema": {
-              "type": "array",
-              "items": {
-                "$ref": "#/definitions/Onboard"
-              }
+            "content": {
+              	"application/json": {
+              		"schema":{
+              			"$ref": "#/definitions/Onboard"
+              		}
+              	}
             }
           }
         },
