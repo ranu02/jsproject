@@ -38,8 +38,8 @@
     }
   ],
   "schemes": [
-    "https",
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/onboard": {
@@ -50,12 +50,7 @@
         "summary": "User sign-up process",
         "description": "User sign-up process.",
         "operationId": "onboard",
-        "content": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/json"
-        ],
+        "consumes": "application/x-www-form-urlencoded",
         "parameters": [
           {
             "in": "formData",
@@ -76,15 +71,21 @@
             }
           }
         ],
-    	 "responses": {
+        "responses": {
           "200": {
             "description": "successful operation",
             "schema": {
-              "type": "json",
+              "type": "array",
               "items": {
                 "$ref": "#/definitions/Onboard"
               }
             }
+          },
+          "400": {
+            "description": "Invalid status value"
+          },
+          "404": {
+            "description": "Not found"
           }
         },
         "security": [
@@ -988,7 +989,7 @@
         "password": {
           "type": "string",
           "example": "12345678"
-        },
+        }
       },
       "xml": {
         "name": "Onboard"
@@ -1012,6 +1013,6 @@
   },
   "externalDocs": {
     "description": "Find out more about Swagger",
-    "url": "http://localhost:5003/"
+    "url": "localhost:5003/"
   }
 }
