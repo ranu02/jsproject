@@ -51,13 +51,9 @@
         "description": "User sign-up process.",
         "operationId": "onboard",
         "consumes": [
-          "application/json",
-          "application/xml",
           "application/x-www-form-urlencoded"
         ],
         "produces": [
-          "application/xml",
-          "application/json",
           "application/x-www-form-urlencoded"
         ],
         "parameters": [
