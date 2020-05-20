@@ -76,6 +76,11 @@
             "contentType": "application/json"
           }
         },
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        },
         "security": [
           {
             "petstore_auth": [
