@@ -38,8 +38,8 @@
     }
   ],
   "schemes": [
-    "https",
-    "http"
+    "http",
+    "https"
   ],
   "paths": {
     "/onboard": {
@@ -50,12 +50,7 @@
         "summary": "User sign-up process",
         "description": "User sign-up process.",
         "operationId": "onboard",
-        "content": [
-          "application/x-www-form-urlencoded"
-        ],
-        "produces": [
-          "application/x-www-form-urlencoded"
-        ],
+        "consumes": "application/x-www-form-urlencoded",
         "parameters": [
           {
             "in": "formData",
