@@ -63,12 +63,10 @@
         "parameters": [
           {
             "in": "formData",
-            "name": "formData",
-            "description": "Pet object that needs to be added to the store",
+            "name": "email",
+            "description": "user email",
             "required": true,
-            "schema": {
-              "$ref": "#/definitions/Onboard"
-            }
+            "type": string
           }
         ],
         "responses": {
