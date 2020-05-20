@@ -71,9 +71,9 @@
             }
           }
         ],
-        "responses": {
-          "200": {
-            "description": "OK"
+        "encoding": {
+          "payload": {
+            "contentType": "application/json"
           }
         },
         "security": [
