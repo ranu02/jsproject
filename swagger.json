@@ -50,7 +50,7 @@
         "summary": "User sign-up process",
         "description": "User sign-up process.",
         "operationId": "onboard",
-        "consumes": [
+        "content": [
           "application/x-www-form-urlencoded"
         ],
         "produces": [
