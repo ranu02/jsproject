@@ -80,12 +80,6 @@
                 "$ref": "#/definitions/Onboard"
               }
             }
-          },
-          "400": {
-            "description": "Invalid status value"
-          },
-          "404": {
-            "description": "Not found"
           }
         },
         "security": [
