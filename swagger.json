@@ -77,7 +77,7 @@
             "schema": {
               "type": "array",
               "items": {
-                "$ref": "#/definitions/ApiResponse"
+                "$ref": "#/definitions/Onboard"
               }
             }
           }
