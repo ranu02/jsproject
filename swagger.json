@@ -76,9 +76,15 @@
             }
           }
         ],
-        "responses": {
-          "405": {
-            "description": "Invalid input"
+    	 "responses": {
+          "200": {
+            "description": "successful operation",
+            "schema": {
+              "type": "json",
+              "items": {
+                "$ref": "#/definitions/Onboard"
+              }
+            }
           }
         },
         "security": [
