@@ -67,6 +67,13 @@
             "description": "user email",
             "required": true,
             "type": string
+          },
+          {
+            "in": "formData",
+            "name": "password",
+            "description": "user password",
+            "required": true,
+            "type": string
           }
         ],
         "responses": {
