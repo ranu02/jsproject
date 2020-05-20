@@ -71,14 +71,12 @@
             }
           }
         ],
-        "encoding": {
-          "payload": {
-            "contentType": "application/json"
-          }
-        },
         "responses": {
           "200": {
-            "description": "OK"
+            "description": "successful operation",
+            "schema": {
+              "$ref": "#/definitions/Onboard"
+             }
           }
         },
         "security": [
