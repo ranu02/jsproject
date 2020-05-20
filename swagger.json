@@ -49,14 +49,16 @@
         ],
         "summary": "User sign-up process",
         "description": "User sign-up process.",
-        "operationId": "addPet",
+        "operationId": "onboard",
         "consumes": [
           "application/json",
-          "application/xml"
+          "application/xml",
+          "application/x-www-form-urlencoded"
         ],
         "produces": [
           "application/xml",
-          "application/json"
+          "application/json",
+          "application/x-www-form-urlencoded"
         ],
         "parameters": [
           {
