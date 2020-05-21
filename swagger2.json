@@ -1,153 +1,243 @@
+
 {
-  "swagger": "2.0",
+  "openapi": "3.0.0",
   "info": {
-    "description": "This is a sample server Petstore server.  You can find out more about     Swagger at [http://swagger.io](http://swagger.io) or on [irc.freenode.net, #swagger](http://swagger.io/irc/).      For this sample, you can use the api key `special-key` to test the authorization     filters.",
+    "description": "sean",
     "version": "1.0.0",
-    "title": "Swagger Petstore",
-    "termsOfService": "http://swagger.io/terms/",
+    "title": "Seans-Python3-Flask-Rest-Boilerplate",
     "contact": {
-      "email": "ayushkymar746@gmail.com"
+      "email": "seanwasere@gmail.com"
     },
     "license": {
-      "name": "Apache 2.0",
-      "url": "http://www.apache.org/licenses/LICENSE-2.0.html"
+      "name": "MIT",
+      "url": "https://opensource.org/licenses/MIT"
     }
   },
-  "host": "localhost:5003/",
-  "basePath": "",
-  "tags": [
+  "servers": [
     {
-      "name": "onboard",
-      "description": "Onboard user",
-      "externalDocs": {
-        "description": "Email and Password required field",
-        "url": "localhost:5003/"
-      }
-    },
-    {
-      "name": "store",
-      "description": "Access to Petstore orders"
-    },
-    {
-      "name": "user",
-      "description": "Operations about user",
-      "externalDocs": {
-        "description": "Find out more about our store",
-        "url": "localhost:5003/"
-      }
+      "url": "/"
     }
   ],
-  "schemes": [
-    "http",
-    "https"
+  "tags": [
+    {
+      "name": "Book Request",
+      "description": "Example API for requesting and return book requests"
+    }
   ],
   "paths": {
-    "/onboard": {
+    "/request": {
+      "get": {
+        "tags": [
+          "Book Request"
+        ],
+        "summary": "Returns bookRequests",
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/bookRequests"
+            }
+          }
+        }
+      },
       "post": {
         "tags": [
-          "onboard"
+          "Book Request"
         ],
-        "summary": "User sign-up process",
-        "description": "User sign-up process.",
-        "operationId": "onboard",
-        "consumes": "application/x-www-form-urlencoded",
-        "parameters": [
-          {
-            "in": "formData",
-            "name": "email",
-            "description": "user email",
-            "required": true,
+        "summary": "Create a new book request system",
+        "requestBody": {
+          "description": "Book Request Post Object",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/bookRequestPostBody"
+              }
+            }
+          }
+        },
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "201": {
+            "description": "OK",
             "schema": {
-              "$ref": "#/definitions/Onboard"
+              "$ref": "#/components/schemas/id"
             }
           },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
+        }
+      }
+    },
+    "/request/{id}": {
+      "parameters": [
+        {
+          "name": "id",
+          "in": "path",
+          "required": true,
+          "description": "ID of the cat that we want to match",
+          "type": "string"
+        }
+      ],
+      "get": {
+        "tags": [
+          "Book Request"
+        ],
+        "summary": "Get book request with given ID",
+        "parameters": [
           {
-            "in": "formData",
-            "name": "password",
-            "description": "user password",
+            "in": "path",
+            "name": "id",
             "required": true,
+            "description": "Book Request id",
             "schema": {
-              "$ref": "#/definitions/Onboard"
+              "$ref": "#/components/schemas/id"
             }
           }
         ],
         "responses": {
-        "200": {
-          "description": "successful operation",
-          "schema": {
-            "aerpass-dev-user"
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/bookRequest"
+            }
           },
-          "properties": {
-            "user_id": {
-                 "type": "string",
-                  "description": "test_user_id"
-                }
+          "400": {
+            "description": "Failed. Misunderstood Request."
           },
-        }
-       },
-        "security": [
-          {
-            "petstore_auth": [
-              "write:pets",
-              "read:pets"
-            ]
+          "404": {
+            "description": "Failed. Book request not found."
           }
-        ]
-      },
-    ,
-    "Tag": {
-      "type": "object",
-      "properties": {
-        "id": {
-          "type": "integer",
-          "format": "int64"
-        },
-        "name": {
-          "type": "string"
         }
       },
-      "xml": {
-        "name": "Tag"
-      }
-    },
-    "Onboard": {
-      "type": "object",
-      "required": [
-        "email",
-        "password"
-      ],
-      "properties": {
-        "email": {
-          "type": "string",
-          "example": "test@yopmail.com"
+      "put": {
+        "summary": "edit a book request by ID",
+        "tags": [
+          "Book Request"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Book Request id",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          }
+        ],
+        "requestBody": {
+          "description": "Book Request Object",
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/bookRequest"
+              }
+            }
+          }
         },
-        "password": {
-          "type": "string",
-          "example": "12345678"
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/bookRequest"
+            }
+          },
+          "400": {
+            "description": "Failed. Bad post data."
+          }
         }
       },
-      "xml": {
-        "name": "Onboard"
-      }
-    },
-    "ApiResponse": {
-      "type": "object",
-      "properties": {
-        "code": {
-          "type": "integer",
-          "format": "int32"
-        },
-        "type": {
-          "type": "string"
-        },
-        "message": {
-          "type": "string"
+      "delete": {
+        "summary": "Delete Book Request by ID",
+        "tags": [
+          "Book Request"
+        ],
+        "parameters": [
+          {
+            "in": "path",
+            "name": "id",
+            "required": true,
+            "description": "Book Request Id",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          }
+        ],
+        "responses": {
+          "204": {
+            "description": "OK",
+            "schema": {
+              "$ref": "#/components/schemas/id"
+            }
+          },
+          "400": {
+            "description": "Failed. Misunderstood Request."
+          },
+          "404": {
+            "description": "Failed. Book Request not found."
+          }
         }
       }
     }
   },
-  "externalDocs": {
-    "description": "Find out more about Swagger",
-    "url": "localhost:5003/"
+  "components": {
+    "schemas": {
+      "id": {
+        "properties": {
+          "uuid": {
+            "type": "string"
+          }
+        }
+      },
+      "bookRequestPostBody": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "format": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          }
+        }
+      },
+      "bookRequest": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "format": "string"
+          },
+          "email": {
+            "type": "string",
+            "format": "email"
+          },
+          "timestamp": {
+            "type": "string",
+            "format": "number"
+          }
+        }
+      },
+      "bookRequests": {
+        "type": "object",
+        "properties": {
+          "bookRequest": {
+            "type": "object",
+            "additionalProperties": {
+              "$ref": "#/components/schemas/bookRequest"
+            }
+          }
+        }
+      }
+    }
   }
 }
