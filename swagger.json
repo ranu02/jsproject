@@ -71,13 +71,20 @@
             }
           }
         ],
-        "responses":{  
-            "200":{ 
-                "schema":{  
-                    "$ref": "#/definitions/Onboard"
+        "responses": {
+        "200": {
+          "description": "successful operation",
+          "schema": {
+            "type": "object"
+          },
+          "properties": {
+            "user_id": {
+                 "type": "string",
+                  "description": "test_user_id"
                 }
-            }
-        },
+          },
+        }
+       },
         "security": [
           {
             "petstore_auth": [
