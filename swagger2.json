@@ -24,7 +24,7 @@
 		}
 	}],
 	"schemes": [
-		"http",
+		"http://localhost:5003",
 		"https"
 	],
 	"paths": {
@@ -141,6 +141,6 @@
 	},
 	"externalDocs": {
 		"description": "Find out more about Swagger",
-		"url": "localhost:5003/"
+		"url": "/"
 	}
 }
