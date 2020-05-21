@@ -60,13 +60,7 @@
 					"200": {
 						"description": "successful operation",
 						"schema": {
-							"$ref": "#/definitions/Pet"
-						},
-						"properties": {
-							"user_id": {
-								"type": "string",
-								"description": "test_user_id"
-							}
+							"$ref": "#/definitions/bookRequest"
 						}
 					}
 				},
@@ -116,6 +110,19 @@
 				"name": "Onboard"
 			}
 		},
+		"bookRequest": {
+		"type": "object",
+		"properties": {
+		  "user_id": {
+		    "type": "string",
+		    "format": "string"
+		  },
+		  "timestamp": {
+		    "type": "string",
+		    "format": "number"
+		  }
+		}
+	      },
 		"ApiResponse": {
 			"type": "object",
 			"properties": {
